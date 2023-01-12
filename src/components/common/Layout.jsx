@@ -3,13 +3,15 @@ import Header from './Header/Header';
 
 import styles from './Layout.module.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, height = '350px', bgImg }) => {
 	return (
-		<div className={styles.wrapper}>
+		<div className={styles.wrapper} style={{height: `${height}`, backgroundImage: `url(${bgImg})`}}>
 			<Header />
-			{children}
+			<div>
+				{children}
+			</div>
 		</div>
 	)
 }
 
-export default Layout
+export default Layout;
