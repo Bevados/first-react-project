@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
 	const history = useNavigate();
 	return (
-    <Layout height="100%" bgImg={bgImg}>
+    <Layout bgImg={bgImg}>
       <Button text="New" callback={() => history('/new-workout')} style="main" />
       <h1 className={styles.heading}>EXERCISES FOR THE SHOULDERS</h1>
       <Counters />
